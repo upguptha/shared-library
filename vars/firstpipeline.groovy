@@ -17,7 +17,7 @@ def call(Map pipelineParams){
             stage ('Build') {
                 steps{
                     echo "Building the application"
-                    echo "********starting Building ${env.APPLICATION_NAME}application "
+                    echo "********starting Building ${env.APPLICATION_NAME} application "
                     }
                 }
             stage ('Calculate') {
@@ -26,7 +26,8 @@ def call(Map pipelineParams){
                             echo "Calling caluculator method of source folder"
                             echo "******printing the sum of values******"
                             // call the add method from the pipeline of vars
-                            calculator.add(2,3)
+                            def sum = this.calculator.add(2,3)
+                            echo "Sum of 2 numbers is ${sum}" 
                             }
                          }
                         }
@@ -62,5 +63,6 @@ def newcal(fifthNumber,sixthNumber) {
 //parameters section: ${params.varaiable}
 
 //sharelibraries pipeline parameters: ${pipelineParams.variable}
+
 
 
