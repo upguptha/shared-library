@@ -40,7 +40,8 @@ def call(Map pipelineParams){
                         echo "Deploying the project into Dev environment"
                          // calling normal method which is there in this one.
                       script {
-                        newcal.call(4,5)
+                           def result = this.newcal(4,5)
+                           echo "Result is ${result}"
                         }
                     }
                 }
@@ -61,4 +62,5 @@ def newcal(fifthNumber,sixthNumber) {
 //parameters section: ${params.varaiable}
 
 //sharelibraries pipeline parameters: ${pipelineParams.variable}
+
 
