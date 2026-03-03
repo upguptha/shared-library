@@ -47,7 +47,7 @@ def call(Map pipelineParams){
             }
         }
         }
-}
+
 
 
 
@@ -61,3 +61,4 @@ def newcal(fifthNumber,sixthNumber) {
 //parameters section: ${params.varaiable}
 
 //sharelibraries pipeline parameters: ${pipelineParams.variable}
+
